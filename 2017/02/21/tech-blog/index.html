@@ -3,21 +3,27 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>shuffle流程浅析 | Hexo</title>
 
   
   <meta name="author" content="John Doe">
   
 
   
+  <meta name="description" content="Shuffle过程，也称Copy阶段。reduce task从各个map task上远程拷贝一片数据，并针对某一片数据，如果其大小超过一定的阀值，则写到磁盘上，否则直接放到内存中。
+官方的Shuffle过程如上图所示，不过细节有错乱，官方图并没有说明partition、sort和combiner具体">
+  
 
+  
+  
+  <meta name="keywords" content>
   
 
   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  
+  <meta property="og:title" content="shuffle流程浅析">
 
   <meta property="og:site_name" content="Hexo">
 
@@ -54,12 +60,11 @@
 </header>
 
     <main class="site-main posts-loop">
-    
-  <article>
+    <article>
 
   
     
-    <h3 class="article-title"><a href="/2017/02/21/tech-blog/"><span>shuffle流程浅析</span></a></h3>
+    <h3 class="article-title"><span>shuffle流程浅析</span></h3>
     
   
 
@@ -102,12 +107,6 @@
 </article>
 
 
-
-
-<nav class="pagination">
-  
-  
-</nav>
     </main>
 
     <footer class="site-footer">
